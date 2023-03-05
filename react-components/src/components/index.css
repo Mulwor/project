@@ -1,0 +1,45 @@
+.header {
+  padding: 10px;
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  border-radius: 10px;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+ @media (max-width: 380px) {
+    .header__wrapper {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.header__logotype {
+    cursor: pointer;
+}
+
+a {
+    font-size: 22px;
+    text-decoration: none; 
+    font-weight: 400;
+}
+
+a:nth-child(2) {
+    margin-left: 20px;
+}
+
+a:visited {
+    color: white;
+}
+
+.header__logotype:hover {
+    color: white;
+}
+
+.header__navigation {
+    display: flex;
+    align-items: center;
+}
