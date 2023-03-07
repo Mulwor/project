@@ -1,3 +1,14 @@
+:root {
+    --color-bg: #2C2C32;
+    --color-bg-hover: hsl(204, 86%, 42%);
+    --color-active: rgb(0, 0, 0);
+}  
+
+.active {
+    color: var(--color-active);
+    cursor: default;
+}
+
 .header {
   padding: 10px;
   background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
@@ -25,15 +36,17 @@ a {
     font-size: 22px;
     text-decoration: none; 
     font-weight: 400;
+    color: white;
 }
 
 a:nth-child(2) {
     margin-left: 20px;
 }
 
-a:visited {
-    color: white;
-}
+
+a:active {
+    color: #f00;            /* Цвет активной ссылки */ 
+} 
 
 .header__logotype:hover {
     color: white;
