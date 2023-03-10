@@ -2,6 +2,7 @@
   padding: 10px;
   background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.529);
 
   .wrapper {
     display: flex;
@@ -10,10 +11,6 @@
 
     .logotype {
       cursor: pointer;
-    }
-
-    .logotype:hover {
-      color: white;
     }
 
     .navigation {
@@ -38,8 +35,8 @@
     } 
 
     .active {
-        color:  rgb(0, 0, 0);
-        cursor: default;
+      color:  rgb(0, 0, 0);
+      cursor: default;
     }
   }
 
