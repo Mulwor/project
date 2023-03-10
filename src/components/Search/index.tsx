@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './index.scss';
 import loupe from '../../assets/loupe-svgrepo-com.svg';
 
 type Unique = {

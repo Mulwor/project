@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './index.scss';
 
 export class Cards extends React.Component {
   cards = [
@@ -249,15 +249,15 @@ export class Cards extends React.Component {
 
   render() {
     return (
-      <div className="containerOriing">
+      <div className="container">
         {this.cards.map((index) => {
           return (
             <div key={index.id} className="card">
               <img src={index.photo} alt="Image" />
-              <div className="container">
-                <h4>
+              <div className="box">
+                <h2>
                   <b>{index.name}</b>
-                </h4>
+                </h2>
                 <p>{index.portion}</p>
               </div>
             </div>
