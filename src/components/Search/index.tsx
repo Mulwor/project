@@ -38,7 +38,7 @@ export class Search extends React.Component<Unique, State> {
         className="search"
         type="search"
         id="search"
-        placeholder="Поиск по карточкам"
+        placeholder="Поиск по карточкам ..."
       />
     </div>
   );
