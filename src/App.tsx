@@ -4,6 +4,7 @@ import { Layout } from './components/Layout';
 import { About } from './pages/About/About';
 import { Home } from './pages/Home/Home';
 import { Error } from './pages/Error/Error';
+import { Form } from './pages/Forms';
 
 export class App extends React.Component {
   render = () => (
@@ -11,6 +12,7 @@ export class App extends React.Component {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/form" element={<Form />} />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>

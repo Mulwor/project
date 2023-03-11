@@ -13,6 +13,7 @@ export class Layout extends React.Component {
 
           <div className="navigation">
             <NavLink to="/">Home</NavLink>
+            <NavLink to="/form">Form</NavLink>
             <NavLink to="/about">About us</NavLink>
           </div>
         </div>
