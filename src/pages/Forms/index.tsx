@@ -5,7 +5,11 @@ export class Form extends React.Component {
   firstname: React.RefObject<HTMLInputElement>;
   secondname: React.RefObject<HTMLInputElement>;
   email: React.RefObject<HTMLInputElement>;
-  country: React.RefObject<HTMLInputElement>;
+  country: React.RefObject<HTMLSelectElement>;
+  gender: React.RefObject<HTMLSelectElement>;
+  date: React.RefObject<HTMLInputElement>;
+  photo: React.RefObject<HTMLInputElement>;
+  agree: React.RefObject<HTMLInputElement>;
 
   constructor(props: Record<string, string>) {
     super(props);
@@ -13,12 +17,17 @@ export class Form extends React.Component {
     this.secondname = React.createRef();
     this.email = React.createRef();
     this.country = React.createRef();
+    this.gender = React.createRef();
+    this.date = React.createRef();
+    this.photo = React.createRef();
+    this.agree = React.createRef();
   }
 
   handleSubmit(event: FormEvent<HTMLFormElement>) {
     console.log('Проверка вывода имени в консоль: ' + this.firstname.current!.value);
     console.log('Проверка вывода фамилии в консоль: ' + this.secondname.current!.value);
     console.log('Проверка вывода эмейл в консоль: ' + this.email.current!.value);
+
     event.preventDefault();
   }
 
@@ -30,29 +39,20 @@ export class Form extends React.Component {
         <div>Заполните данную форму, чтобы увидеть свою карточку</div>
 
         <form className="form" onSubmit={(event) => this.handleSubmit(event)}>
-          {/* Имя */}
           <div className="item">
             <label className="labels">
               Firstname:
-              <input type="text" id="name" className="inputForms" required ref={this.firstname} />
+              <input type="text" id="name" className="inputForms" ref={this.firstname} />
             </label>
           </div>
 
-          {/* Фамилия  */}
           <div className="item">
             <label className="labels">
               Secondname:
-              <input
-                type="text"
-                id="surname"
-                className="inputFormsS"
-                required
-                ref={this.secondname}
-              />
+              <input type="text" id="surname" className="inputFormsS" ref={this.secondname} />
             </label>
           </div>
 
-          {/* Почта */}
           <div className="item">
             <label className="labels">
               Email:
@@ -61,15 +61,11 @@ export class Form extends React.Component {
                 name="email"
                 id="email"
                 className="inputFormsS"
-                required
                 ref={this.email}
               />
             </label>
           </div>
 
-          {/* Дата рождения */}
-
-          {/* Откуда ты родом */}
           <div>
             <label className="country">
               Where are you from:
@@ -92,25 +88,33 @@ export class Form extends React.Component {
             </label>
           </div>
 
-          {/* Чекбокс с выбором пола 
-          <label className="man">
+          <label className="gender">
             Your gender:
-            <select className="you">
+            <select className="you" ref={this.gender}>
               <option value="denmark">Men</option>
               <option value="Russia">Women</option>
               <option value="Russia">It</option>
             </select>
           </label>
-        */}
 
-          {/* ? Добавление картинки*/}
+          <div className="form-item" ref={this.date}>
+            <label className="form-item-label">
+              Your birthday in:
+              <input type="date" ref={this.date} />
+            </label>
+          </div>
 
-          {/* Чекбокс с согласием 
+          <div className="form-item">
+            <label className="form-item-label">
+              Upload file
+              <input type="file" ref={this.photo} />
+            </label>
+          </div>
+
           <div>
-            <input type="checkbox" id="coding" name="interest" value="coding" />
+            <input type="checkbox" id="coding" name="interest" value="coding" ref={this.agree} />
             <label>Ваши данные будут использованы в умышленных целях и будут переданы в ФБР </label>
           </div>
-          */}
 
           {/* Кнопка для создания карточки */}
           <button className="uniqiue__button button">Создать карточку</button>
